@@ -24,6 +24,6 @@ app.use(cors({
 
 apolloServer.applyMiddleware({app, cors:false, path:'/graphql'})
 
-app.listen(PORT,"0.0.0.0",()=>{
+app.listen(PORT,()=>{
     console.log(`API Gateway listening at ${PORT}`)
 })
