@@ -2,6 +2,9 @@
   "name": "micronode-core",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "repository": "git@github.com:RikLakhe/micronode-core.git",
   "author": "rikeshshrestha <rikeshshrestha@gmail.com>",
   "license": "MIT",
