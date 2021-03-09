@@ -18,11 +18,14 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn run server:build"
   },
   "dependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "apollo-server": "^2.19.2",
     "apollo-server-express": "^2.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",

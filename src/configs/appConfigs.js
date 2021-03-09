@@ -1,0 +1,1 @@
+export const USER_SERVICE_URI = process.env.PROJECT_USER_URL || "userService"

@@ -22,6 +22,10 @@ app.use(cors({
     credentials: true
 }))
 
+app.get('/', (request, response) => {
+    response.json({info: 'Core server up and running !!!!'})
+})
+
 apolloServer.applyMiddleware({app, cors:false, path:'/graphql'})
 
 app.listen(PORT,()=>{
