@@ -5,10 +5,13 @@ import express from 'express'
 
 import resolvers from "#root/graphql/resolvers";
 import typeDefs from "#root/graphql/typeDefs";
+import {customLog} from "#root/helper/log";
+import formatGraphQAErrors from "./formatGraphQAErrors"
 
 const PORT = process.env.PORT || 7000;
 
 const apolloServer = new ApolloServer({
+    formatError: formatGraphQAErrors,
     resolvers,
     typeDefs,
 })
@@ -29,5 +32,5 @@ app.get('/', (request, response) => {
 apolloServer.applyMiddleware({app, cors:false, path:'/graphql'})
 
 app.listen(PORT,()=>{
-    console.log(`API Gateway listening at ${PORT}`)
+    customLog(`API Gateway listening at ${PORT}`)
 })
