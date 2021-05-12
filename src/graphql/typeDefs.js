@@ -6,7 +6,11 @@ const typeDefs = gql`
         user_name: String!,
         user_email: String!,
         user_password: String!,
-        active: Boolean!
+        active: Boolean!,
+    }
+    
+    type Mutation{
+        createUser(name: String!,email:String!, password: String!): User!
     }
 
     type Query{
