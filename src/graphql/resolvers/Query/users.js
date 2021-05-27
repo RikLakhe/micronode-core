@@ -1,13 +1,9 @@
-const usersResolver = async () =>{
-    return [
-        {
-            user_id: 13123,
-            user_name: "test",
-            user_email: "test@test.test",
-            user_password: "testsetsetse",
-            active: active
-    }
-    ]
+import UserService from "#root/adaptors/userService";
+
+export const users = async () =>{
+    return await UserService.fetchAllUsers();
 }
 
-export default usersResolver
+export const findUser = async (obj, {id}) =>{
+    return await UserService.fetchUser(id);
+}
