@@ -1,7 +1,9 @@
 import UserService from "#root/adaptors/userService";
 
-const usersResolver = async () =>{
+export const users = async () =>{
     return await UserService.fetchAllUsers();
 }
 
-export default usersResolver
+export const findUser = async (obj, {id}) =>{
+    return await UserService.fetchUser(id);
+}
