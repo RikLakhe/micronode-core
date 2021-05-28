@@ -25,7 +25,6 @@ export default class UserService{
 
     static async deleteUser(id){
         const response = await axios.delete(`${user_module_url}/v1/users/`+id)
-        console.log("response.data.data",response.data.data)
         return  response.data.data;
     }
 }
