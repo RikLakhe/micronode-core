@@ -14,6 +14,10 @@ const apolloServer = new ApolloServer({
     formatError: formatGraphQAErrors,
     resolvers,
     typeDefs,
+    context: ({req})=>{
+        const token = req.headers.authorization || '';
+        console.log("Authorization token",token);
+    }
 })
 
 const app = express();
